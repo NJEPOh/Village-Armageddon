@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1jhbsdwgvxuu"]
+[gd_scene load_steps=8 format=3 uid="uid://c1jhbsdwgvxuu"]
 
-[ext_resource type="Texture2D" uid="uid://w64520ek0rol" path="res://Ref/UI & UX.png" id="1_0pooy"]
 [ext_resource type="Script" uid="uid://0byxee8uhmu" path="res://ui_ux.gd" id="1_wfld5"]
 [ext_resource type="FontFile" uid="uid://byukh0u431up0" path="res://Assets/Fonts/ari-w9500-display.ttf" id="2_8khy1"]
 [ext_resource type="Script" uid="uid://cifg68ny12kd0" path="res://skip.gd" id="2_crypu"]
@@ -18,12 +17,6 @@ bg_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [node name="UI UX" type="CanvasLayer"]
 script = ExtResource("1_wfld5")
-
-[node name="Ui&Ux" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(581, 330)
-scale = Vector2(0.28027013, 0.22778732)
-texture = ExtResource("1_0pooy")
 
 [node name="Hari" type="RichTextLabel" parent="."]
 anchors_preset = 5
@@ -55,13 +48,26 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Coin"]
 layout_mode = 0
-offset_left = 60.0
+offset_left = 124.0
 offset_top = -3.0
 offset_right = 194.0
 offset_bottom = 37.0
 theme_override_fonts/normal_font = ExtResource("2_8khy1")
 theme_override_font_sizes/normal_font_size = 24
 text = "coin"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Coin" type="RichTextLabel" parent="Coin"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = -3.0
+offset_right = 122.0
+offset_bottom = 37.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 24
 fit_content = true
 tab_size = 8
 horizontal_alignment = 2
@@ -82,13 +88,26 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="WH"]
 layout_mode = 0
-offset_left = 60.0
+offset_left = 132.0
 offset_top = -1.0
 offset_right = 194.0
 offset_bottom = 39.0
 theme_override_fonts/normal_font = ExtResource("2_8khy1")
 theme_override_font_sizes/normal_font_size = 24
 text = "WH"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="WH" type="RichTextLabel" parent="WH"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = -1.0
+offset_right = 122.0
+offset_bottom = 39.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 24
 fit_content = true
 tab_size = 8
 horizontal_alignment = 2
@@ -109,13 +128,25 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="Gandum"]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 80.0
 offset_top = -9.0
 offset_right = 166.0
 offset_bottom = 31.0
 theme_override_fonts/normal_font = ExtResource("2_8khy1")
 theme_override_font_sizes/normal_font_size = 16
 text = "gandum"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Gandum" type="RichTextLabel" parent="Gandum"]
+layout_mode = 0
+offset_top = -9.0
+offset_right = 86.0
+offset_bottom = 31.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
 fit_content = true
 tab_size = 8
 horizontal_alignment = 2
@@ -136,13 +167,26 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Daging"]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 96.0
 offset_top = -8.0
 offset_right = 166.0
 offset_bottom = 32.0
 theme_override_fonts/normal_font = ExtResource("2_8khy1")
 theme_override_font_sizes/normal_font_size = 16
 text = "daging"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Daging" type="RichTextLabel" parent="Daging"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 94.0
+offset_bottom = 32.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
 fit_content = true
 tab_size = 8
 horizontal_alignment = 2
@@ -163,13 +207,26 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="Senjata"]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 96.0
 offset_top = -8.0
 offset_right = 166.0
 offset_bottom = 32.0
 theme_override_fonts/normal_font = ExtResource("2_8khy1")
 theme_override_font_sizes/normal_font_size = 16
 text = "senjata"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Senjata" type="RichTextLabel" parent="Senjata"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -8.0
+offset_right = 86.0
+offset_bottom = 32.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
 fit_content = true
 tab_size = 8
 horizontal_alignment = 2
@@ -189,11 +246,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 [node name="RichTextLabel5" type="RichTextLabel" parent="Petani"]
 layout_mode = 0
 offset_left = 8.0
-offset_right = 142.0
+offset_right = 72.0
 offset_bottom = 40.0
 theme_override_fonts/normal_font = ExtResource("2_8khy1")
 theme_override_font_sizes/normal_font_size = 16
 text = "petani"
+fit_content = true
+tab_size = 8
+vertical_alignment = 1
+
+[node name="Petani" type="RichTextLabel" parent="Petani"]
+layout_mode = 0
+offset_left = 88.0
+offset_right = 152.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
 fit_content = true
 tab_size = 8
 vertical_alignment = 1
@@ -212,11 +280,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 [node name="RichTextLabel6" type="RichTextLabel" parent="Peternak"]
 layout_mode = 0
 offset_left = 8.0
-offset_right = 142.0
+offset_right = 96.0
 offset_bottom = 40.0
 theme_override_fonts/normal_font = ExtResource("2_8khy1")
 theme_override_font_sizes/normal_font_size = 16
 text = "peternak"
+fit_content = true
+tab_size = 8
+vertical_alignment = 1
+
+[node name="Peternak" type="RichTextLabel" parent="Peternak"]
+layout_mode = 0
+offset_left = 112.0
+offset_right = 200.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
 fit_content = true
 tab_size = 8
 vertical_alignment = 1
@@ -235,11 +314,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 [node name="RichTextLabel7" type="RichTextLabel" parent="Pandai Besi"]
 layout_mode = 0
 offset_left = 8.0
-offset_right = 142.0
+offset_right = 120.0
 offset_bottom = 40.0
 theme_override_fonts/normal_font = ExtResource("2_8khy1")
 theme_override_font_sizes/normal_font_size = 16
 text = "pandai besi"
+fit_content = true
+tab_size = 8
+vertical_alignment = 1
+
+[node name="PandaiBesi" type="RichTextLabel" parent="Pandai Besi"]
+layout_mode = 0
+offset_left = 136.0
+offset_right = 248.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
 fit_content = true
 tab_size = 8
 vertical_alignment = 1
