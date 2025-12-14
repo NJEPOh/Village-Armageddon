@@ -1,17 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1jhbsdwgvxuu"]
+[gd_scene load_steps=9 format=3 uid="uid://c1jhbsdwgvxuu"]
 
 [ext_resource type="Texture2D" uid="uid://w64520ek0rol" path="res://Ref/UI & UX.png" id="1_0pooy"]
+[ext_resource type="Script" uid="uid://0byxee8uhmu" path="res://ui_ux.gd" id="1_wfld5"]
+[ext_resource type="FontFile" uid="uid://byukh0u431up0" path="res://Assets/Fonts/ari-w9500-display.ttf" id="2_8khy1"]
+[ext_resource type="Script" uid="uid://cifg68ny12kd0" path="res://skip.gd" id="2_crypu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toiw0"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfld5"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crypu"]
 bg_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
-[node name="UI UX" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8khy1"]
+
+[node name="UI UX" type="CanvasLayer"]
+script = ExtResource("1_wfld5")
 
 [node name="Ui&Ux" type="Sprite2D" parent="."]
 visible = false
@@ -19,19 +25,22 @@ position = Vector2(581, 330)
 scale = Vector2(0.28027013, 0.22778732)
 texture = ExtResource("1_0pooy")
 
-[node name="Hari" type="Panel" parent="."]
-layout_mode = 1
+[node name="Hari" type="RichTextLabel" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -135.25
-offset_right = 135.25
+offset_left = -135.0
+offset_right = 135.0
 offset_bottom = 80.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_toiw0")
+theme_override_styles/background = SubResource("StyleBoxFlat_wfld5")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Coin" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.049000002
@@ -44,8 +53,21 @@ offset_bottom = 20.248
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Coin"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = -3.0
+offset_right = 194.0
+offset_bottom = 37.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 24
+text = "coin"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="WH" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.120000005
@@ -58,8 +80,21 @@ offset_bottom = 20.239998
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="WH"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = -1.0
+offset_right = 194.0
+offset_bottom = 39.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 24
+text = "WH"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="Gandum" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.208
@@ -72,8 +107,21 @@ offset_bottom = 14.216003
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
+[node name="RichTextLabel3" type="RichTextLabel" parent="Gandum"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -9.0
+offset_right = 166.0
+offset_bottom = 31.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
+text = "gandum"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="Daging" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.256
@@ -86,8 +134,21 @@ offset_bottom = 14.1119995
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
+[node name="RichTextLabel4" type="RichTextLabel" parent="Daging"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -8.0
+offset_right = 166.0
+offset_bottom = 32.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
+text = "daging"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="Senjata" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.30600002
@@ -100,8 +161,21 @@ offset_bottom = 13.71199
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
+[node name="RichTextLabel5" type="RichTextLabel" parent="Senjata"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -8.0
+offset_right = 166.0
+offset_bottom = 32.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
+text = "senjata"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="Petani" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.50200003
 anchor_bottom = 0.50200003
@@ -112,8 +186,19 @@ offset_bottom = -26.29602
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
+[node name="RichTextLabel5" type="RichTextLabel" parent="Petani"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 142.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
+text = "petani"
+fit_content = true
+tab_size = 8
+vertical_alignment = 1
+
 [node name="Peternak" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.50200003
 anchor_bottom = 0.50200003
@@ -124,8 +209,19 @@ offset_bottom = 21.70398
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
+[node name="RichTextLabel6" type="RichTextLabel" parent="Peternak"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 142.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
+text = "peternak"
+fit_content = true
+tab_size = 8
+vertical_alignment = 1
+
 [node name="Pandai Besi" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.50200003
 anchor_bottom = 0.50200003
@@ -136,15 +232,48 @@ offset_bottom = 69.70398
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
 
-[node name="Senjata2" type="Panel" parent="."]
-layout_mode = 1
+[node name="RichTextLabel7" type="RichTextLabel" parent="Pandai Besi"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 142.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 16
+text = "pandai besi"
+fit_content = true
+tab_size = 8
+vertical_alignment = 1
+
+[node name="Skip Hari" type="Panel" parent="."]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -200.0
-offset_top = -56.0
+offset_top = -64.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_crypu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Skip Hari"]
+layout_mode = 0
+offset_left = -88.0
+offset_top = -8.0
+offset_right = 182.0
+offset_bottom = 72.0
+theme_override_fonts/normal_font = ExtResource("2_8khy1")
+theme_override_font_sizes/normal_font_size = 18
+text = "HARI 
+BERIKUTNYA"
+fit_content = true
+tab_size = 8
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Skip Hari"]
+position = Vector2(104.000015, 24.00002)
+scale = Vector2(10.802941, 2.5575047)
+shape = SubResource("RectangleShape2D_8khy1")
+action = "Skip"
+script = ExtResource("2_crypu")
